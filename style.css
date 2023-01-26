@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Verdana, sans-serif;
+    color: beige;
+    font-size: 10pt;
+    margin: 0px;
+}
+body{
+    background-image: url("black.png");
+}
+main,nav,article,footer{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+    "hea hea "
+    "nav nav  "
+    "art art "
+    "foo foo "
+    ;
+
+}
+main{
+    max-width: 900px;
+    background-color: rgb(red, green, blue);
+    margin: auto;
+    width: 70%;
+    padding: 10px;
+}
+header{
+    grid-area: hea;
+    height: 300px;
+    background-size:cover;
+    margin: 0px;
+}
+header>img{
+    width: 100%;
+    height: 100%;
+}
+/*nav bar */
+nav{
+    grid-area: nav;
+    background-color: gray;
+
+}
+nav>ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    float: left;
+    
+}
+li a {
+    display: block;
+    padding: 8px;
+    border-right: 1px solid #ffffff;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover {
+    background-color: rgb(185, 113, 30);
+  }
+/*article szerkesztése*/
+article{
+    grid-area: art;
+    background-color: white;
+    color: black;
+}
+article>div>img{
+    width: 100%;
+    height: 80%;
+}
+article li {
+    text-indent: 50px;
+}
+article>div>h1{
+    font-size: 15px;
+}
+article>div,ul,p,h1 {
+ margin-top: 2%;
+}
+.divszin{
+    color: black;
+}
+/*footer szerkesztése*/
+footer{
+    grid-area: foo;
+    background-color: yellow;
+    width: 100%;
+    color: black;
+}
